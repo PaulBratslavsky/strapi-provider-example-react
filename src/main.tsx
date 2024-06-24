@@ -10,6 +10,7 @@ import PrivateRoutes,  { loader as authLoader } from "./private-routes";
 
 import ErrorPage from "./error-page";
 import LoginRedirect from "./login-redirect";
+import { Dashboard } from "./views/dashboard";
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard",
-        element: <div>Dashboard</div>,
-      },
-      {
-        path: "settings",
-        element: <div>Settings</div>,
+        element: <Dashboard />,
       },
     ],
   },

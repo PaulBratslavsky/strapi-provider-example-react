@@ -21,7 +21,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
   const token = localStorageData?.token;
 
   try {
-    const BASE_URL = "http://localhost:1337";
+    const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
     const path = "/api/users/me";
 
     const url = new URL(path, BASE_URL);

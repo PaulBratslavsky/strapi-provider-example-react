@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useLocation, useParams } from "react-router-dom";
 import { localStorageUtil } from './utils/local-storage';
 
-const backendUrl = 'http://localhost:1337';
+const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:1337";
 
 const LoginRedirect = () => {
   const [text, setText] = useState('Loading...');
